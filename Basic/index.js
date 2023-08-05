@@ -36,3 +36,61 @@ function timeHouAndMin(num) {
 }
 
 console.log(timeHouAndMin(65));
+
+//6. How to reverse a Number
+const num = 827265213;
+const convert = num.toString().split("").reverse().join("");
+console.log(Number(convert));
+
+//7. No. of occurance of the given string
+
+const name = 'Ajeet Jha';
+const lowercaseName = name.toLowerCase();
+const letterCount = {};
+for (let letter of lowercaseName) {
+    if (letterCount[letter]) {
+        letterCount[letter]++;
+    } else {
+        letterCount[letter] = 1;
+    }
+}
+
+console.log(letterCount);
+
+// 8. if inside object(key and value pair) ,value is empty or undifined or null,
+// then only print those keys which value is present  .
+
+const obj = {
+    a: 21,
+    b: "Ajeet",
+    c: "",
+    d: { "sal": 7888 },
+    e: undefined,
+    f: null,
+    g: [82, 3, 2, 4]
+}
+
+const newObj = {};
+for (let [key, value] of Object.entries(obj)) {
+    if (value) {
+        newObj[key] = value;
+    }
+}
+console.log(newObj);
+
+//9. Inside array I want unique values
+const array1 = [2, 4, 6, 3, 7, 4, 26, 2, 3];
+const uniqe = [...new Set(array1)]
+console.log(array1);
+
+// 10. I want to check inside this String How many vowels is present
+const nameValue = "Ashis";
+const vowels = "aeiouAEIOU";
+let count = 0;
+for (let letter of nameValue) {
+    if (vowels.includes(letter)) {
+        count++;
+    }
+}
+console.log(count);
+
