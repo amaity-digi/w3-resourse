@@ -299,3 +299,124 @@ function naming() {
 console.log(name88); // ans Ajjjet
 // first it will prioty of block scope, then whatever thing is present then less prioty is function scope
 // it is declared with var keyword so, it will override the name.
+
+//Variable Showing
+{
+    var a = 100;
+}
+{
+    let a = 10;
+}
+// yaa it's ok, because let is inside block scope only, and var is inside block and outside only.
+
+// var c = "ss";
+// const c = 8;
+//SyntaxError: Identifier 'c' has already been declared
+// now we are getting error, because both are globally declared and we cannot redeclared
+
+//Execution context
+
+// let age9 = 21;
+// if(false){
+//     var age9 = 22
+// }
+// console.log(age9);
+
+//whenwver we have javaScipt code , one execution context is created, it will list of all the variable,
+//at the time of compailation itself, interpeter will throw error, you are redclared the same variable.
+
+// let counting = 7;
+// while (counting) {
+//     count--;
+//     if (true) {
+//         var counting = 8;
+//     }
+// }
+
+
+//ans it will throw error, because execution context is created andit will first check the assignig value
+
+//JSON.Stringify() ==> it will convert json object to string.
+
+const aa = {
+    name: "Ajeet",
+    age: 32
+}
+console.log(JSON.stringify(aa));
+//ans===> {"name":"Ajeet","age":32}
+
+//it is a built-in JavaScript function that converts a JavaScript object or value into a JSON (JavaScript Object Notation) string.
+
+
+//JSON.parse()  ==> it will convert json string to object.
+
+// it is a built-in JavaScript function that is used to parse a JSON (JavaScript Object Notation) string and convert it into a JavaScript object or value. 
+
+const jsonString = '{"name":"John","age":30,"city":"New York"}';
+const parsedObject = JSON.parse(jsonString);
+console.log(parsedObject);
+
+//Null
+let user = null;
+// whenever we are not sure about data, we declared as a null. null is primitive datatype.
+typeof (null); // is object.
+typeof (false); // is boolean.
+typeof (undefined); // undefined.
+
+//Undifined, means we are not defined a value. just declared but not assigned any value.
+let user1;
+console.log(typeof (user1));
+
+//undeclared ==> we haven't declared that value, whether it is var, let or const.
+// name;
+
+//How to check the given number is integer or float , just devided by 1 and check the remainder
+
+const aaa = 8888;
+if (aaa % 1 == 0) {
+    console.log("Integer");
+} else {
+    console.log("float");
+}
+
+// NAN 
+
+"23" === NaN;
+//ans ==>false
+78 === NaN
+//ans ==>false
+
+// Infinity
+// + Infinity is the biggest number and -Infinity is the smallest number.
+const biggestNum = Math.max(72, 3, 23, 21, 3, 43);
+console.log(biggestNum);
+
+const z = Math.ceil(727.2);
+console.log(z)// ans 728,it will give round figure of upper number
+
+const x = Math.floor(727.2);
+console.log(x); // it will give privious number round figure.
+
+
+// Reverse a string using inbuild function 
+
+const a11 = "Hello World Bro!";
+const reversedWords = a11.split(/\s+/).reverse().join(' ');
+console.log(reversedWords);  // Output: "Bro! World Hello"
+
+
+//Check the Anagram
+
+const checkAnagram = (str1, str2) => {
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    const sortstr1 = str1.split("").sort().join("");
+    const sortstr2 = str2.split("").sort().join("");
+    if (sortstr1 !== sortstr2) {
+        return false;
+    }
+    return true;
+}
+
+checkAnagram("silent", "listen");
