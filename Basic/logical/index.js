@@ -64,3 +64,57 @@ function findCommonElement(arr1, arr2) {
 }
 
 findCommonElement([5], [5, 1, 7, 8, 4]);
+
+// How to find element given array is empty or not??
+
+const a = [];
+const b = [1, 2, 3, 4];
+function arrayEmptyOrNot(array) {
+    if (array.length === 0) {
+        console.log("Given array is empty!");
+    }
+    else if (array.length > 0) {
+        console.log(`Array length is ${array.length}`)
+    }
+}
+console.log(arrayEmptyOrNot(b));
+
+//nth fibonacci using recursion
+
+function fibonacci(n) {
+    if (n === 0 || n === 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+fibonacci(4);
+
+//How to check if a given array is empty or not.
+let array = [1, 2, 3];
+let array1 = [];
+function checkArr(arr) {
+    if (arr.length === 0) {
+        console.log("Array is Empty")
+    } else {
+        console.log(`The length of array is: ${arr.length}`);
+    }
+}
+checkArr(array1);
+
+//How to check if a given number is integer or desimal
+let num = 54;
+let num1 = 88.6;
+function checkValue(number) {
+    if (number % 1 === 0) {
+        console.log("number is integer");
+    } else {
+        console.log("number is desimal");
+    }
+}
+
+checkValue(num1);
+
+//sort() method
+
