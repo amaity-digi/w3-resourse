@@ -127,3 +127,35 @@ checkValue(num1);
 //   console.log(divideNumbers(8, 3));
 //   console.log(divideNumbers(8, 0));
 
+// optimize color code using number
+
+const getBgColor = (param) => {
+    return{
+        0: "",
+        1: "Red",
+        2: "Blue",
+        3: "Yellow"
+    }}
+
+    console.log(getBgColor()[3]);
+    
+// if I have undifined or null or "" then I don't want this values, I want if my values is present
+// that values should display , others no need
+
+const object = {
+    a: "Good",
+    b: "",
+    c: undefined,
+    d: null,
+    e: "Something!",
+    f: "Ajeet"
+}
+
+const newObj = {};
+for(let [key,value] of Object.entries(object)){
+    if(value){
+        newObj[key] = value;
+    }
+}
+
+console.log(newObj,'newValues');
