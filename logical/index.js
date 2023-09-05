@@ -159,3 +159,36 @@ for(let [key,value] of Object.entries(object)){
 }
 
 console.log(newObj,'newValues');
+
+
+//type coercion
+console.log([] == ![]); // true
+console.log(typeof [],'obj'); // object
+console.log(typeof ![], 'boolean'); //false
+console.log(![], 'res'); // false
+console.log([].toString(), 'res1'); //""
+
+// => []==![]
+// []==false // Type conversion by the statement itself
+// []==0 // To number of right operand
+// ""==0 // To Primitive call for Array which will in this case convert to empty string
+// 0==0 // To number call of "" which is 0
+// true
+
+// JavaScript performs type coercion, converting false to a numeric value (0)
+//and due to another type coercion, the empty array is converted to an empty string '',
+// which is also converted to the numeric value 0. Hence, the expression 0 == 0 evaluates to true.
+
+
+console.log(NaN === NaN);// false
+// NaN (Not a Number) is a special numeric value in JavaScript, So value should be different.
+console.log(typeof NaN);
+
+console.log(null == undefined); // Ans is true.
+//In JavaScript, null and undefined are considered equal only when using loose equality (==). 
+//Therefore, null == undefined evaluates to true.
+
+
+console.log(null === undefined); // false, because both type are different, null typeof is object and undefined typeof is undefined.
+
+
