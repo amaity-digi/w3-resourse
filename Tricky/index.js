@@ -159,3 +159,71 @@ for(let i = 1; i<5; i++){
     if(i === 3) continue; // whenever i==3 for loops is exit that value.
     console.log(i); // 1, 2 4
 }
+
+//How to find index & How to update object properties
+
+const object = [{a:1, b:6}, {a:90, b: 5},{a:12, b:76}];
+
+const index = object.findIndex((ele) => ele.b === 5);
+console.log("index", index);
+object[index]["b"] = 100; // here updating the value.
+console.log("object",object);
+
+// How to add newObject in a given array.
+const obj5 = [{a: 78, b: 8 },{a: 87, b: 98 },{a: 10, b: 9 }];
+const newObj = {name:"Ajeet", age:29 };
+const updatedObj = [...obj5, newObj];
+console.log(updatedObj,'updatedOBJ');
+
+// How to delete an object in a given array??
+const obj6 = [{a: 78, b: 8 },{a: 87, b: 98 },{a: 10, b: 9 }];
+const deletedObj = obj6.filter((ele) => ele.a !== 87);
+console.log('Deleted',deletedObj);
+
+// Write a JavaScript program to check whether a given positive number is a divisable of 3 or 7.
+
+function divisableOf3OR7(num){
+    if(num % 3 == 0 || num % 7 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(divisableOf3OR7(12));//true
+console.log(divisableOf3OR7(10));// false
+console.log(divisableOf3OR7(14));// true
+
+//Write a JavaScript program to create another string from a given string
+// with the first character of the given string added to the front and back.
+
+function first(str) {
+    let first1 = str.substring(0,1);
+    return first1 + str + first1;
+}
+
+console.log(first("Good"));
+
+// how to check in a given string h is present or not in js??
+//using includes methods
+function findingCha(str1){
+   if(str1.includes("h")){
+    return true;
+   }else{
+    return false;
+   }
+}
+
+console.log(findingCha("ashish"));
+
+//using indexOf() to check given string is present or not??
+
+function findIndexStr(params) {
+    if(params.indexOf("j") !== -1){
+        console.log("The given string is present");
+    }else{
+        console.log("No value present!");
+    }
+}
+
+console.log(findIndexStr("Ajeet"));
