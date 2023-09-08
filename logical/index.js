@@ -191,4 +191,99 @@ console.log(null == undefined); // Ans is true.
 
 console.log(null === undefined); // false, because both type are different, null typeof is object and undefined typeof is undefined.
 
+//Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.
+
+function checkStartsWith(str){
+    if(str.startsWith("V")){
+     console.log("strat with the given string");
+    }else{
+        console.log("false");
+    }
+}
+
+console.log(checkStartsWith("Vivek"));
+
+//Write a JavaScript program to produce a new string that has the first 3 characters in lower case 
+//from a given string. If the string length is less than 3 convert all the characters to upper case.
+
+//phython is string here, I want PHYthon
+function lowerUpper(str){
+  const upper = str.substring(0,3).toUpperCase();
+  const lower = str.substring(3).toLowerCase();
+  return upper + lower;
+}
+
+console.log((lowerUpper("phython")));
+
+//Write a JavaScript program to concatenate two strings except for their first character.
+
+function concatenate(str1, str2){
+    const s1 = str1.substring(1, str1.length);
+    console.log(s1,'111');
+    const s2 = str2.substring(1, str2.length);
+    console.log(s2,'222');
+    return s1 + s2;
+}
+
+console.log(concatenate("Phython", "JS"));
+
+// Write a JavaScript program to create a new string 
+//without the first and last characters of a given string. 
+
+function withoutFirstAndLast(str1){
+//   const withoutFirst = str1.substring(1);
+//   console.log(withoutFirst,'1');
+//   const withoutLast = str1.substring(0, str1.length-1);
+//   console.log(withoutLast);
+  const withOutFirstAndLast = str1.substring(1, str1.length -1);
+  return withOutFirstAndLast;
+   
+}
+
+console.log(withoutFirstAndLast("Javascript"));
+
+//Write a JavaScript program to extract the first half of a even string.
+
+function halfOfStr(str){
+   if(str.length % 2 == 0){
+     return str.slice(0, str.length /2);
+   }
+   return str;
+}
+
+console.log(halfOfStr("JavaScript"));
+
+// Write a JavaScript program to concatenate two strings and return the result. 
+//If the length of the strings does not match, then remove the characters from the longer string. 
+
+function removeLongerIfBothLengthIsNotMatch(str1, str2){
+    const min = Math.min(str1.length, str2.length);
+
+    return str1.substring(str1.length - min) + str2.substring(str2.length -min);
+}
+
+console.log(removeLongerIfBothLengthIsNotMatch("JAVA", "Javascript"));
+
+//Write a JavaScript program to display the city name 
+//if the string begins with "Los" or "New" otherwise return blank.  
+
+function dispayCityNAme(str){
+    if(str.length >= 3 && ((str.substring(0,3) == "Los") || (str.substring(0,3) == "New"))){
+        return str;
+    } 
+    return "";
+}
+
+console.log(dispayCityNAme("NewYork"));
+console.log(dispayCityNAme("Los Kolkata"));
+console.log(dispayCityNAme("Dubai"));
+
+//Write a JavaScript program to rotate the elements left in a given array of integers of length 3. 
+
+function rotateArrayAtLeft(arr){
+   return [arr[1],arr[2],arr[0]];
+}
+
+console.log(rotateArrayAtLeft([3,5,7]));
+
 

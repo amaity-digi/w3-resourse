@@ -3,7 +3,7 @@
 
 const today = new Date();
 const day = today.getDate();
-var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+const daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
 console.log("Today is : " + daylist[day]);
 
 //2. Write a JavaScript program to get the website URL (loading page).
