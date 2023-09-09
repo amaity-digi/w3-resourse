@@ -83,3 +83,43 @@ function swapAnotherWay(arr){
 }
 
 console.log("Another way to swap an array", swapAnotherWay([2,3,4,6,8,9]));
+
+// Write a JavaScript program to change the capitalization of all letters in a given string. example: Germany to gERMANY.
+
+function convertCapitalToSmallAndSmallToCap(str){
+   let newStr = "";
+   for(let character of str){
+    if(character.toLowerCase() === character){
+        newStr += character.toUpperCase();
+    }else{
+        newStr += character.toLowerCase();
+    }
+   }
+   return newStr;
+}
+
+console.log(convertCapitalToSmallAndSmallToCap("TamilNaru"));
+
+// Write a JavaScript program to convert a given number into hours and minutes.
+
+function convertHourAndMinutes(num) {
+    let hours = Math.floor(num / 60);
+    let mins = num % 60;
+    return hours + " : " + mins;
+}
+
+console.log(convertHourAndMinutes(130));
+
+// Write a JavaScript program to capitalize the first letter of each word in a given string.
+
+function capitalLetters(str){
+    const newStr = str.split(" ");
+    const array = [];
+    for(let word of newStr){
+        const caplitalized =word.charAt(0).toUpperCase() + word.slice(1);
+        array.push(caplitalized);
+    }
+    return array.join(" ");
+}
+
+console.log(capitalLetters("The little brown box!"));
