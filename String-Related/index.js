@@ -123,3 +123,86 @@ function capitalLetters(str){
 }
 
 console.log(capitalLetters("The little brown box!"));
+
+// Scroll to the top of the page
+
+// const goToTop = () => window.scrollTo(0,0);
+// goToTop();
+
+// check if a variable is an array
+
+ const isArray = (arr) => Array.isArray(arr);
+
+console.log(isArray([2,3,6]));// truw
+console.log(isArray({"Name": "djs"})); // false
+
+// calculate the number of days between two dates using javascript
+
+function NumOfDaysBtwTwoDayas(startDateStr, endDateStr){
+    const startDate = new Date(startDateStr);
+    const endDate = new Date(endDateStr);
+
+    if(isNaN(startDate) || isNaN(endDate)){
+        return "Invalid Date Format";
+    }
+    const timeDiff = endDate - startDate;
+    const daysDiff = Math.floor(timeDiff / (24 * 60 * 60 * 1000));
+    return daysDiff;
+}
+
+console.log(NumOfDaysBtwTwoDayas("2023-10-20", "2023-10-28"));
+
+//Check the string is Palidrome or not
+
+function isPalindrome(str){
+    const newStr = str.split("").reverse().join("");
+    return newStr === str;
+}
+
+console.log(isPalindrome("madam")); // true
+
+// get the current time in hh:mm:ss format
+
+const getTime = () =>new Date().toLocaleTimeString();
+console.log(getTime());
+
+// get the current date in dd:mm:yyyy format
+
+const getDate = () => new Date().toLocaleDateString();
+console.log(getDate());
+
+//check if an object is empty or not
+
+const isEmptyObj = (obj) => Object.keys(obj).length === 0 ;
+console.log("isEmpObj1", isEmptyObj({}));
+console.log("isEmpObj2",isEmptyObj({"age": 29}));
+
+//Check if an Array is empty or not
+
+function isArrayEmpty(arr){
+    return Array.isArray(arr) && arr.length > 0;
+}
+
+console.log(isArrayEmpty([]));//false;
+console.log(isArrayEmpty([2,3,4])); // true;
+
+//Find the max value in an array
+const maxval = [3,345,2,4,643,234,224,13];
+const maxValFind = Math.max(...maxval);
+console.log(maxValFind);
+
+// sort Array Acs
+const  sortArrAsc = (arr) => arr.sort((a,b) => a - b);
+console.log(sortArrAsc([2,3,56,33,52,5]));
+
+//
+const  sortArrDsc = (arr) => arr.sort((a,b) => b - a);
+console.log(sortArrDsc([33,52,5]));
+
+// Extract the domain name from an email
+
+const extraDomainBefore = (email) => email.split("@")[0]; // this is after split ==> [ 'amaity', 'digisprint.com' ] , zeroth index
+const extraDomainAfter = (email) => email.split("@")[1]; // first Index ==> digisprint.com
+
+console.log(extraDomainBefore("amaity@digisprint.com")); 
+console.log(extraDomainAfter("amaity@digisprint.com")); 
