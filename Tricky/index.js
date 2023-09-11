@@ -227,3 +227,65 @@ function findIndexStr(params) {
 }
 
 console.log(findIndexStr("Ajeet"));
+
+// Write a JavaScript program to display the current day and time in the following format.
+//Today is : Tuesday.
+//Current time is : 10 PM : 30 : 38
+
+const date = new Date();
+const dayList = ["Sun", "Mon", "Tuesday", "Wed", "Thursday", "Fri", "Satur"];
+const getDays = date.getDay();
+console.log(`Today is ${dayList[getDays]}`);
+
+const hours = date.getHours();
+const mins = date.getMinutes();
+const sec =date.getMinutes();
+
+const amPm  = (hours >= 12 ? "PM" : "AM")
+console.log(`Current time is : ${hours} ${amPm} : ${mins} : ${sec}`);
+
+// Write a JavaScript program to print the current window contents.  
+// function print(){
+//     return window.print();
+// }
+
+// console.log(print());
+
+// Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050. 
+
+function firstJanFind(){
+    for(let i = 2014; i <= 2050; i++){
+        let date = new Date(i, 0, 1);
+        if(date.getDay() === 0){
+            console.log("1st January is a Sunday  "+ i);
+        }
+    }
+}
+
+console.log(firstJanFind());
+
+// Write a JavaScript program to calculate the days left before Christmas.
+
+function calculateLeftBeforeChristmas(){
+    const date = new Date();
+    const christmas = new Date(2023, 11, 25);
+    console.log(christmas,'aa');
+    const difference = christmas - date;
+    const dayLeft = Math.floor((difference / (24 * 60 * 60 * 1000)));
+    return dayLeft;
+}
+console.log(calculateLeftBeforeChristmas());
+
+// How to add space between in a given string
+// const name = "Ajeet"; output should be ==> "Aje et";
+
+function addSpace(str){
+    const name = str.substring(0,3);
+    const space = " ";
+    const afterSpace = str.substring(3);
+    return name + space + afterSpace;
+}
+
+console.log(addSpace("Ajeet"));
+
+
